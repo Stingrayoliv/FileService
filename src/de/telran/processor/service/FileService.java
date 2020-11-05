@@ -16,7 +16,7 @@ public class FileService {
         List<ImageDescriptor> list = new ArrayList<>();
         List<String> listTemp = readFileIntoList(fileName);
         for (String str : listTemp) {
-            String[] array = str.split("\\s+");
+            String[] array = str.split(":");
             list.add(new ImageDescriptor(array[0], array[1]));
         }
         return list;
