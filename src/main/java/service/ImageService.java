@@ -14,6 +14,6 @@ public class ImageService {
 
     public BufferedImage processImage(BufferedImage image, String actionName) throws Exception{
         ImageAction action=factory.getAction(actionName);
-           return action.doAction(image);
+        return action.doAction(image);
     }
 }

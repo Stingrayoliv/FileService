@@ -26,11 +26,8 @@ public class ImageProcessor {
     }
 
     public void process(String fileName) {
-
         List<ImageDescriptor> imageDescriptors = fileService.readImageDescriptors(fileName);
-        // List успешных
         List<DownloadedImage> downloadedImages = downloadService.downloadImages(imageDescriptors);
         List<DownloadedImage> s=downloadedImages.stream().filter(DownloadedImage::isSucсessful).collect(Collectors.toList());
-
     }
 }
