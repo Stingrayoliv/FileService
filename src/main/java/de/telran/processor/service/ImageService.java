@@ -1,7 +1,7 @@
-package service;
+package de.telran.processor.service;
 
-import action.ImageAction;
-import factory.ImageActionFactory;
+import de.telran.processor.action.ImageAction;
+import de.telran.processor.factory.ImageActionFactory;
 
 import java.awt.image.BufferedImage;
 

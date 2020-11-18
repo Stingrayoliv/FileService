@@ -1,7 +1,9 @@
-import entity.DownloadedImage;
-import entity.ImageDescriptor;
-import service.DownloadService;
-import service.FileService;
+package de.telran.processor;
+
+import de.telran.processor.entity.DownloadedImage;
+import de.telran.processor.entity.ImageDescriptor;
+import de.telran.processor.service.DownloadService;
+import de.telran.processor.service.FileService;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -27,7 +29,7 @@ public class ImageProcessor {
 
     public void process(String fileName) {
         List<ImageDescriptor> imageDescriptors = fileService.readImageDescriptors(fileName);
-        List<DownloadedImage> downloadedImages = downloadService.downloadImages(imageDescriptors);
-        List<DownloadedImage> s=downloadedImages.stream().filter(DownloadedImage::isSucсessful).collect(Collectors.toList());
+        //List<DownloadedImage> downloadedImages = downloadService.downloadImages(imageDescriptors);
+        //List<DownloadedImage> s=downloadedImages.stream().filter(DownloadedImage::isSucсessful).collect(Collectors.toList());
     }
 }

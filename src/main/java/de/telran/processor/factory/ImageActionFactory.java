@@ -1,9 +1,9 @@
-package factory;
+package de.telran.processor.factory;
 
-import action.DefaultImageAction;
-import action.GrayscaleImageAction;
-import action.ImageAction;
-import action.PreviewImageAction;
+import de.telran.processor.action.DefaultImageAction;
+import de.telran.processor.action.GrayscaleImageAction;
+import de.telran.processor.action.ImageAction;
+import de.telran.processor.action.PreviewImageAction;
 
 public class ImageActionFactory {
     public ImageAction getAction(String actionName){

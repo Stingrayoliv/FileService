@@ -1,4 +1,4 @@
-package entity;
+package de.telran.processor.entity;
 
 import java.awt.image.BufferedImage;
 

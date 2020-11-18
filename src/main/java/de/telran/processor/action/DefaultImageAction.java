@@ -1,4 +1,4 @@
-package action;
+package de.telran.processor.action;
 
 import java.awt.image.BufferedImage;
 

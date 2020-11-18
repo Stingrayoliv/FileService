@@ -1,4 +1,4 @@
-package entity;
+package de.telran.processor.entity;
 
 public class ImageDescriptor {
     private String imageURL;

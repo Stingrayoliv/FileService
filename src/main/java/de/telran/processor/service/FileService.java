@@ -1,6 +1,6 @@
-package service;
+package de.telran.processor.service;
 
-import entity.ImageDescriptor;
+import de.telran.processor.entity.ImageDescriptor;
 
 import java.util.Collections;
 import java.util.List;
