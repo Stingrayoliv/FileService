@@ -31,11 +31,11 @@ public class ActionsConfigService {
         }
     }
 
-    private String getActionPackage(){
+    public String getActionPackage(){
         return (String) prop.get("action.package");
     }
 
-    private List<String> getActionClassNames(){
+    public List<String> getActionClassNames(){
         return Arrays.asList(((String) prop.get("action.names")).split(","));
     }
 }
