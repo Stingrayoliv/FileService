@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 
-public class ActionsConfigService {
+public class ActionsConfigService implements ActionsConfigServiceInt {
     private Properties prop = new Properties();
 
     public ActionsConfigService() {
