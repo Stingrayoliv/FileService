@@ -10,12 +10,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DownloadService {
+    private ImageReadingService imageReadingService;
+
+    public DownloadService(ImageReadingService imageReadingService){
+        this.imageReadingService=imageReadingService;
+    }
+
     public List<DownloadedImage> downloadImages(List<ImageDescriptor> descriptors) {
         List<DownloadedImage> imageList = new ArrayList<>();
         for (ImageDescriptor descriptor : descriptors) {
             try {
                 URL url = new URL(descriptor.getImageURL());
-                BufferedImage image = ImageIO.read(url);
+                //BufferedImage image = ImageIO.read(url);//mock for testing
+                BufferedImage image = imageReadingService.readImageFromUrl(url);
                 imageList.add(new DownloadedImage(image, true, descriptor));
             } catch (Exception ex) {
                 System.out.println(ex.getMessage());

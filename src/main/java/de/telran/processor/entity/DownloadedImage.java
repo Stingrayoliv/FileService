@@ -1,5 +1,7 @@
 package de.telran.processor.entity;
 
+import de.telran.processor.service.ImageReadingService;
+
 import java.awt.image.BufferedImage;
 
 public class DownloadedImage {

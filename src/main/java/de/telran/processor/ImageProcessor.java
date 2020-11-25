@@ -15,10 +15,10 @@ public class ImageProcessor {
     public static void main(String[] args) {
         String csvFile = "images.csv";
         FileService fs = new FileService();
-        DownloadService ds = new DownloadService();
+        //DownloadService ds = new DownloadService();
 
-        ImageProcessor processor = new ImageProcessor(fs, ds);
-        processor.process(csvFile);
+        //ImageProcessor processor = new ImageProcessor(fs, ds);
+        //processor.process(csvFile);
 
     }
 
