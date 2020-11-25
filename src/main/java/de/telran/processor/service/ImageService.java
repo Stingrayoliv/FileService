@@ -13,7 +13,7 @@ public class ImageService {
         this.factory = factory;
     }
 
-    public DownloadedImage processImage(DownloadedImage image) throws Exception {
+    public DownloadedImage processImage(DownloadedImage image){
         ImageAction action = factory.getAction(image.getDescriptor().getActionName());
         try {
             BufferedImage result = action.doAction(image.getImage());
