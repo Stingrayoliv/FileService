@@ -15,6 +15,14 @@ public class ActionsConfigService {
         loadProperties();
     }
 
+    public String getActionPackage(){
+        return (String) prop.get("action.package");
+    }
+
+    public List<String> getActionClassNames(){
+        return Arrays.asList(((String) prop.get("action.names")).split(","));
+    }
+
     public void loadProperties() throws IOException {
 //        try (
 //                InputStream input = ImageActionFactory.class
@@ -32,15 +40,6 @@ public class ActionsConfigService {
         ClassLoader loader = Thread.currentThread().getContextClassLoader();
         InputStream stream = loader.getResourceAsStream("actions.properties");
         prop.load(stream);
-
-
     }
 
-    public String getActionPackage(){
-        return (String) prop.get("action.package");
-    }
-
-    public List<String> getActionClassNames(){
-        return Arrays.asList(((String) prop.get("action.names")).split(","));
-    }
 }
