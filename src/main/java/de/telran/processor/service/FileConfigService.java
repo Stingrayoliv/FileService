@@ -11,7 +11,7 @@ public class FileConfigService {
         loadProperties();
     }
 
-    public String getPathToSavedImages() {
+    public String getPathToSavedImages(String path_to_saves_images) {
         return prop.getProperty("path_to_saves_images");
     }
 
@@ -20,7 +20,7 @@ public class FileConfigService {
             ClassLoader loader = Thread.currentThread().getContextClassLoader();
             InputStream stream = loader.getResourceAsStream("application.properties");
             if (stream == null) {
-                System.out.println("Sorry, unable to find actions.properties");
+                System.out.println("Sorry, unable to find application.properties");
                 return;
             }
             prop.load(stream);
@@ -28,10 +28,4 @@ public class FileConfigService {
             ex.printStackTrace();
         }
     }
-
-    public static void main(String[] args) {
-
-    }
 }
-
-
