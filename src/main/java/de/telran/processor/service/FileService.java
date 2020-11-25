@@ -24,7 +24,7 @@ public class FileService {
         try {
             ImageIO.write(imageToSave.getImage(),
                     "jpg",
-                    new File(configService.getOathToSavedImages(),
+                    new File(configService.getPathToSavedImages(),
                             generateImageName(imageToSave.getDescriptor())));
         } catch (Exception ex) {
             ex.printStackTrace();

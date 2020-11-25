@@ -15,5 +15,4 @@ class FileServiceTest {
 //        String actual = service.generateImageName(descriptor);
 //        assertEquals(expected, actual);
     }
-
 }

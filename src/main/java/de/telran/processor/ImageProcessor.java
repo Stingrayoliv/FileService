@@ -3,7 +3,6 @@ package de.telran.processor;
 import de.telran.processor.entity.DownloadedImage;
 import de.telran.processor.entity.ImageDescriptor;
 import de.telran.processor.service.DownloadService;
-import de.telran.processor.service.FileConfigService;
 import de.telran.processor.service.FileService;
 import de.telran.processor.service.ImageService;
 
@@ -17,11 +16,11 @@ public class ImageProcessor {
 
     public static void main(String[] args) {
         String csvFile = "images.csv";
-        FileService fs = new FileService(new FileConfigService());
+        FileService fs = new FileService(new ImageReadingService());
         DownloadService ds = new DownloadService();
 
-        ImageProcessor processor = new ImageProcessor(fs, ds);
-        processor.process(csvFile);
+        //ImageProcessor processor = new ImageProcessor(fs, ds);
+        //processor.process(csvFile);
 
     }
 
@@ -33,10 +32,12 @@ public class ImageProcessor {
 
     public void process(String fileName) {
         //main logic is here
+
         // reading CSV file to get image data like URLS and actions
         List<ImageDescriptor> imageDescriptors = fileService.readImageDescriptors(fileName);
-        // dowload images
+        // download images
         List<DownloadedImage> downloadedImages = downloadService.downloadedImages(imageDescriptors);
+
         //filter successfully downloaded images
         List<DownloadedImage> successfulDownloadedImages=downloadedImages
                 .stream()
@@ -44,21 +45,19 @@ public class ImageProcessor {
                 .collect(Collectors.toList());
 
         //apply action to every downloaded image
-        List<DownloadedImage> processedImages = successfulDownloadedImages
-                .stream().map(di -> imageService.processImage(di))
-                .collect(Collectors.toList());
+//        List<DownloadedImage> processedImages = successfulDownloadedImages
+//                .stream().map(di -> imageService.processImage(di))
+//                .collect(Collectors.toList());
 
         //save transformed images to disk
-processedImages
-.stream()
-        .forEach(f->fileService.saveImageAsFile(f));
-        //where do we save an image?-use some config service
+//processedImages
+//.stream()
+//        .forEach(f->fileService.saveImageAsFile(f));
+        //where do we save an image?-use some config service-FileConfigService
 
 
         //generate a file name. how?
-        //file naming strategy: 1. action_name+random.jpg->wich target format to use?
+        //file naming strategy: 1. action_name+random.jpg->witch target format to use?
                                 //2. use a file name from original URL.
-
-
     }
 }

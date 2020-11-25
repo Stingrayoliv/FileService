@@ -8,18 +8,18 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 
-public class ActionsConfigService {
+public class ActionsConfigService implements ActionsConfigServiceInt {
     private Properties prop = new Properties();
 
-    public ActionsConfigService()throws IOException {
+    public ActionsConfigService() throws Exception {
         loadProperties();
     }
 
-    public String getActionPackage(){
+    public String getActionPackage() {
         return (String) prop.get("action.package");
     }
 
-    public List<String> getActionClassNames(){
+    public List<String> getActionClassNames() {
         return Arrays.asList(((String) prop.get("action.names")).split(","));
     }
 
@@ -41,5 +41,4 @@ public class ActionsConfigService {
         InputStream stream = loader.getResourceAsStream("actions.properties");
         prop.load(stream);
     }
-
 }

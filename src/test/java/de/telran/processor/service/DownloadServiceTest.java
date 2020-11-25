@@ -4,7 +4,6 @@ import de.telran.processor.entity.DownloadedImage;
 import de.telran.processor.entity.ImageDescriptor;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
