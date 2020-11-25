@@ -1,0 +1,12 @@
+/Users/stingrey/Projects/ImageProcessor/src/main/java/de/telran/processor/action/DefaultImageAction.java
+/Users/stingrey/Projects/ImageProcessor/src/main/java/de/telran/processor/factory/ImageActionFactory.java
+/Users/stingrey/Projects/ImageProcessor/src/main/java/de/telran/processor/action/GrayscaleImageAction.java
+/Users/stingrey/Projects/ImageProcessor/src/main/java/de/telran/processor/ImageProcessor.java
+/Users/stingrey/Projects/ImageProcessor/src/main/java/de/telran/processor/service/FileService.java
+/Users/stingrey/Projects/ImageProcessor/src/main/java/de/telran/processor/action/ImageAction.java
+/Users/stingrey/Projects/ImageProcessor/src/main/java/de/telran/processor/service/ActionsConfigService.java
+/Users/stingrey/Projects/ImageProcessor/src/main/java/de/telran/processor/action/PreviewImageAction.java
+/Users/stingrey/Projects/ImageProcessor/src/main/java/de/telran/processor/entity/DownloadedImage.java
+/Users/stingrey/Projects/ImageProcessor/src/main/java/de/telran/processor/entity/ImageDescriptor.java
+/Users/stingrey/Projects/ImageProcessor/src/main/java/de/telran/processor/service/DownloadService.java
+/Users/stingrey/Projects/ImageProcessor/src/main/java/de/telran/processor/service/ImageService.java

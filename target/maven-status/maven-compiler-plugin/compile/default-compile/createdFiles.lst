@@ -1,0 +1,12 @@
+de/telran/processor/action/PreviewImageAction.class
+de/telran/processor/action/ImageAction.class
+de/telran/processor/service/FileService.class
+de/telran/processor/action/DefaultImageAction.class
+de/telran/processor/entity/DownloadedImage.class
+de/telran/processor/service/ImageService.class
+de/telran/processor/factory/ImageActionFactory.class
+de/telran/processor/entity/ImageDescriptor.class
+de/telran/processor/service/DownloadService.class
+de/telran/processor/action/GrayscaleImageAction.class
+de/telran/processor/service/ActionsConfigService.class
+de/telran/processor/ImageProcessor.class
