@@ -27,7 +27,8 @@ class ImageActionFactoryTest {
         assertNotNull(preview);
         assertEquals("PREVIEW", preview.getName());
 
-        //verify(configService, times(1))
+        verify(configService, times(1)).getActionPackage();
+        verify(configService, times(1)).getActionClassNames();
     }
 
     private static List<String> getClassNames() {

@@ -1,12 +1,6 @@
 package de.telran.processor.factory;
-
-import de.telran.processor.action.DefaultImageAction;
-import de.telran.processor.action.GrayscaleImageAction;
 import de.telran.processor.action.ImageAction;
-import de.telran.processor.action.PreviewImageAction;
 import de.telran.processor.service.ActionsConfigService;
-
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
