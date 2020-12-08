@@ -10,6 +10,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class FileService {
+    private static  String CSV_SEPARATOR=":";
     private FileConfigService configService;
 
     public FileService(FileConfigService configService) {
@@ -17,6 +18,14 @@ public class FileService {
     }
 
     public List<ImageDescriptor> readImageDescriptors(String fileName) {
+//        try {
+//            return File
+//                    .line(Path.get)
+//
+//        }catch (Exception ex){
+//
+//        }
+
         return Collections.EMPTY_LIST;
     }
 

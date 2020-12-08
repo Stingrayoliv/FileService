@@ -24,7 +24,7 @@ public class ImageActionFactory {
     public ImageAction getAction(String actionName) {
         return imageActionMap.get(actionName);
     }
-
+/*
     public static void main(String[] args) throws Exception {
         ImageActionFactory imageActionFactory = new ImageActionFactory(new ActionsConfigService());
         ImageAction preview = imageActionFactory.getAction("PREVIEW");
@@ -33,4 +33,5 @@ public class ImageActionFactory {
         ImageAction default1 = imageActionFactory.getAction("DEFAULT");
         default1.doAction(null);
     }
+ */
 }
