@@ -7,7 +7,7 @@ import de.telran.processor.factory.ImageActionFactory;
 import java.awt.image.BufferedImage;
 
 public class ImageService {
-    ImageActionFactory factory;
+    private ImageActionFactory factory;
 
     public ImageService(ImageActionFactory factory) {
         this.factory = factory;

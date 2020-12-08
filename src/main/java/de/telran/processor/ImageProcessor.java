@@ -56,10 +56,11 @@ public class ImageProcessor {
                 .stream()
                 .forEach(f -> fileService.saveImageAsFile(f));
         //where do we save an image?-use some config service-FileConfigService
-
-
         //generate a file name. how?
-        //file naming strategy: 1. action_name+random.jpg->witch target format to use?
-        //2. use a file name from original URL.
+        //file naming strategy: 1. action_name+random_number.jpg->witch target format to use?
+        //                      2. use a file name from original URL
+        //                      lukaroundimg/beelitz2017/1a.jpg -> lukaroundimg_beelitz2017_1a_TRULALA.jpg
+
+
     }
 }
